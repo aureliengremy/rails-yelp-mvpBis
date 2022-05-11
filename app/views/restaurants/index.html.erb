@@ -1,0 +1,16 @@
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Restaurant</h1>
+    <div class="col-md-8 my-4">
+      <% @restaurants.each do |restaurant| %>
+        <div class="row">
+          <%= link_to restaurant[:name], restaurant_path(restaurant), class:"fs-5" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-md-8 fs-4">
+      <%= link_to "Create new restaurant", new_restaurant_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>
